@@ -131,26 +131,44 @@ body {
     text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
 }
 
+.car-number-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+
 .car-number {
-    font-size: 8rem;
+    font-size: 7rem;
     font-weight: bold;
     color: #d4af37;
     text-shadow: 
         0 2px 5px rgba(0, 0, 0, 0.5),
         0 0 10px rgba(212, 175, 55, 0.3);
-    margin: 0.5rem 0;
     line-height: 1;
     text-align: center;
     width: 100%;
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
-    position: relative;
 }
 
-.car-number::after {
+.car-suffix {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin-top: 0.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    font-family: sans-serif;
+}
+
+.car-number-container::after {
     content: '';
     position: absolute;
     width: 80%;
@@ -245,7 +263,11 @@ input[type="number"] {
     }
     
     .car-number {
-        font-size: 7rem;
+        font-size: 6rem;
+    }
+
+    .car-suffix {
+        font-size: 1.5rem;
     }
     
     .car-name {
@@ -266,7 +288,11 @@ input[type="number"] {
     }
     
     .car-number {
-        font-size: 6rem;
+        font-size: 5rem;
+    }
+
+    .car-suffix {
+        font-size: 1.3rem;
     }
     
     .emblem-text {
@@ -281,29 +307,29 @@ input[type="number"] {
 /* 桁数に応じたフォントサイズ調整 */
 @media (min-width: 769px) {
     .car-number.digits-1 {
-        font-size: 8rem;
-    }
-    
-    .car-number.digits-2 {
         font-size: 7rem;
     }
     
+    .car-number.digits-2 {
+        font-size: 6.5rem;
+    }
+    
     .car-number.digits-3 {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
     
     .car-number.digits-4 {
-        font-size: 5rem;
+        font-size: 4.8rem;
     }
 }
 
 @media (max-width: 768px) {
     .car-number.digits-1 {
-        font-size: 7rem;
+        font-size: 6rem;
     }
     
     .car-number.digits-2 {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
     
     .car-number.digits-3 {
@@ -317,11 +343,11 @@ input[type="number"] {
 
 @media (max-width: 480px) {
     .car-number.digits-1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
     
     .car-number.digits-2 {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     
     .car-number.digits-3 {
