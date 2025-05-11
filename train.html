@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>豪華列車車両番号表示</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="train-car-number-display">
+            <div class="train-car-frame">
+                <div class="train-emblem">
+                    <div class="emblem-inner">
+                        <span class="emblem-text">GATANGO</span>
+                    </div>
+                </div>
+                <div class="car-number" id="carNumber">3600</div>
+                <div class="car-name">GATANGO</div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="decrementBtn">前の車両</button>
+            <input type="number" id="carInput" min="1" max="3600" value="3600">
+            <button id="incrementBtn">次の車両</button>
+            <button id="applyBtn">適用</button>
+        </div>
+        
+        <div class="back-button-container">
+            <button id="backBtn" class="back-button">選択画面に戻る</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

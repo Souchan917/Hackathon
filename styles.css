@@ -216,6 +216,26 @@ input[type="number"] {
         0 0 5px rgba(212, 175, 55, 0.3);
 }
 
+.back-button-container {
+    margin-top: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.back-button {
+    padding: 0.7rem 1.5rem;
+    background: linear-gradient(to bottom, #555, #333);
+    color: #d4af37;
+    border: 1px solid #222;
+    font-size: 1rem;
+    min-width: 200px;
+}
+
+.back-button:hover {
+    background: linear-gradient(to bottom, #666, #444);
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .train-car-frame {

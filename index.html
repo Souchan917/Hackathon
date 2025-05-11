@@ -3,34 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>豪華列車車両番号表示</title>
+    <title>スタッフ管理画面</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="staff.css">
 </head>
 <body>
-    <div class="container">
-        <div class="train-car-number-display">
-            <div class="train-car-frame">
-                <div class="train-emblem">
-                    <div class="emblem-inner">
-                        <span class="emblem-text">GATANGO</span>
-                    </div>
-                </div>
-                <div class="car-number" id="carNumber">3600</div>
-                <div class="car-name">GATANGO</div>
+    <div class="staff-container">
+        <h1>謎解き公演管理画面</h1>
+        
+        <div class="display-options">
+            <div class="option-card" id="train-option">
+                <div class="option-icon">🚂</div>
+                <h2>車両番号表示</h2>
+                <p>豪華列車の車両番号を表示します</p>
+                <button class="select-btn" id="trainBtn">選択</button>
+            </div>
+            
+            <div class="option-card" id="bomb-option">
+                <div class="option-icon">💣</div>
+                <h2>爆弾カウントダウン</h2>
+                <p>時限爆弾のカウントダウンを表示します</p>
+                <button class="select-btn" id="bombBtn">選択</button>
             </div>
         </div>
         
-        <div class="controls">
-            <button id="decrementBtn">前の車両</button>
-            <input type="number" id="carInput" min="1" max="3600" value="3600">
-            <button id="incrementBtn">次の車両</button>
-            <button id="applyBtn">適用</button>
+        <div class="controls-common">
+            <button id="backToSelectionBtn" style="display: none;">選択画面に戻る</button>
+        </div>
+
+        <div id="displayArea" class="display-area">
+            <!-- 表示エリア（車両番号または爆弾カウントダウン） -->
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="staff.js"></script>
 </body>
 </html> 

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const decrementBtn = document.getElementById('decrementBtn');
     const incrementBtn = document.getElementById('incrementBtn');
     const applyBtn = document.getElementById('applyBtn');
+    const backBtn = document.getElementById('backBtn');
     const carName = document.querySelector('.car-name');
 
     // 最大車両数
@@ -83,6 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCarNumber(inputNumber);
         // 適用ボタンを押したら自動減少を開始
         startAutoDecrease();
+    });
+
+    // 選択画面に戻るボタン
+    backBtn.addEventListener('click', () => {
+        // 自動減少を停止
+        stopAutoDecrease();
+        // 選択画面に戻る
+        window.location.href = 'index.html';
     });
 
     // 入力フィールドの変更イベント
